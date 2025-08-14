@@ -1,0 +1,54 @@
+{
+  "kycDashboard": {
+    "total": "3450",
+    "newKYC": { "count": 3000, "change": 12, "isPositive": true },
+    "modifiedKYC": {
+      "count": 450,
+      "change": -10,
+      "isPositive": false,
+      "breakdown": { "myKRA": 400, "interop": 56 }
+    }
+  },
+  "barChart": {
+    "individual": {
+      "today": 460,
+      "yesterday": 300
+    },
+    "nonIndividual": {
+      "today": 305,
+      "yesterday": 250
+    }
+  },
+  "categories": {
+    "Individual": { "RI": { "dark": 95, "light": 75 }, "NRI": { "dark": 45, "light": 35 } },
+    "Non Individual": { "RI": { "dark": 90, "light": 70 }, "NRI": { "dark": 40, "light": 30 } }
+  },
+  "statusCards": [
+    { "id": 1, "title": "KYC Initiated", "icon": "RocketLaunchIcon", "color": "text-blue-600", "count": 230 },
+    { "id": 2, "title": "Under Process", "icon": "Cog6ToothIcon", "color": "text-orange-500", "count": 45 },
+    { "id": 3, "title": "Registered", "icon": "UserIcon", "color": "text-cyan-500", "count": 350 },
+    { "id": 4, "title": "Validated", "icon": "ShieldCheckIcon", "color": "text-green-600", "count": 654 },
+    { "id": 5, "title": "Hold", "icon": "PauseCircleIcon", "color": "text-sky-500", "count": 269 },
+    { "id": 6, "title": "Docs Pending", "icon": "BeakerIcon", "color": "text-red-500", "count": 100 }
+  ],
+  "solicitedUnsolicited": {
+    "Individual": {
+      "Solicited": { "total": 3456, "noOfPANsSolicited": 85, "received": 70, "consumed": 60, "pending": 25 },
+      "Unsolicited": { "total": 2234, "noOfPANsSolicited": 80, "received": 65, "consumed": 45, "pending": 30 }
+    },
+    "Non Individual": {
+      "Solicited": { "total": 4123, "noOfPANsSolicited": 90, "received": 75, "consumed": 55, "pending": 20 },
+      "Unsolicited": { "total": 1876, "noOfPANsSolicited": 75, "received": 60, "consumed": 40, "pending": 35 }
+    }
+  },
+  "panDataStats": {
+    "Individual": {
+      "pansSolicited": { "total": 956, "kfinKra": 400, "withImage": 250, "withoutImage": 256 },
+      "dataReceived": { "total": 320, "kfinKra": 300, "withImage": 100, "withoutImage": 20 }
+    },
+    "Non Individual": {
+      "pansSolicited": { "total": 1234, "kfinKra": 500, "withImage": 340, "withoutImage": 294 },
+      "dataReceived": { "total": 456, "kfinKra": 400, "withImage": 150, "withoutImage": 56 }
+    }
+  }
+}
