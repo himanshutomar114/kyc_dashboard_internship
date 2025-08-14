@@ -34,3 +34,54 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+
+# KYC Dashboard - Next.js Project
+
+A Next.js dashboard for KYC statistics, featuring status cards, PAN data stats, solicited/unsolicited charts, and dark mode toggle. Built with **React**, **Tailwind CSS**, and **Heroicons**.
+
+---
+
+## Features
+
+- KYC Status Cards with dynamic counts
+- Solicited/Unsolicited circular charts
+- PAN Data Statistics section
+- Toggle between Individual / Non Individual data
+- Date filters: Today / Yesterday
+- Dark mode support
+- Fully responsive design
+- Next.js API routes for mock data (`/api/mockKYCData`)
+
+---
+
+## Project Structure
+
+src/
+├─ app/
+│ └─ dashboard/
+│ ├─ components/
+│ │ ├─ CategoriesSection.tsx
+│ │ ├─ KYCStatusCard.tsx
+│ │ ├─ CircularChartSkeleton.tsx
+│ │ ├─ KYCCard.tsx
+│ │ ├─ Navbar.tsx
+│ │ ├─ PanSection.tsx
+│ │ ├─ Solicited.tsx
+│ │ ├─ Sidebar.tsx
+│ │ ├─ BarChart.tsx
+│ └─ page.tsx
+├─ hooks/
+│ └─ useKYCData.ts
+├─ data/
+│ └─ mockKYCData.json
+├─ pages/
+│ └─ api/
+│ └─ mockKYC.ts
+└─ styles/
+└─ globals.css
+
+
+
+
