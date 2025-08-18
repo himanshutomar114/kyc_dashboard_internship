@@ -13,7 +13,7 @@ import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Calendar } from "lucide-react";
-import { toPng } from "html-to-image";
+import { toPng, toJpeg } from "html-to-image";
 import jsPDF from "jspdf";
 
 export default function Dashboard() {
@@ -25,11 +25,15 @@ export default function Dashboard() {
   const dashboard = document.getElementById("dashboard-section");
   if (!dashboard) return;
 
-  const imgData = await toPng(dashboard, { cacheBust: true });
+  
+  const imgData = await toJpeg(dashboard, { quality: 0.5, cacheBust: true }); 
+  
   const pdf = new jsPDF("l", "mm", "a4");
   const width = pdf.internal.pageSize.getWidth();
   const height = pdf.internal.pageSize.getHeight();
-  pdf.addImage(imgData, "PNG", 0, 0, width, height);
+
+  pdf.addImage(imgData, "JPEG", 0, 0, width, height);
+
   pdf.save("dashboard.pdf");
 };
 
