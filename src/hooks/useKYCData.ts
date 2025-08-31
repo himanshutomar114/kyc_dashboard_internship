@@ -15,9 +15,13 @@ export const useKYCData = () => {
         if (!res.ok) throw new Error("Failed to fetch KYC data");
         const json = await res.json();
         setData(json);
-      } catch (err: any) {
+      } catch (err: unknown) {
         console.error("Failed to fetch KYC data:", err);
-        setError(err.message);
+        if (err instanceof Error) {
+          setError(err.message);
+        } else {
+          setError(String(err));
+        }
       } finally {
         setLoading(false);
       }

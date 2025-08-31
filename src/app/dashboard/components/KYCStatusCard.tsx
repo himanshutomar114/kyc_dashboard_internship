@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { SVGProps } from "react";
 import {
   RocketLaunchIcon,
   Cog6ToothIcon,
@@ -12,7 +13,7 @@ import {
 
 import { useKYCData } from "@/hooks/useKYCData";
 
-const iconMap: Record<string, React.ComponentType<any>> = {
+const iconMap: Record<string, React.ComponentType<SVGProps<SVGSVGElement>>> = {
   RocketLaunchIcon,
   Cog6ToothIcon,
   UserIcon,

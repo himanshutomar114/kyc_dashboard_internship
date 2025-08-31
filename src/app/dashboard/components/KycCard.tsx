@@ -36,7 +36,7 @@ const KYCDashboard: React.FC = () => {
         <div className="mb-1">
           <h2 className="text-sm font-medium text-gray-600">Total KYCs</h2>
           <h1 className="text-xl font-bold text-gray-900">
-            {formatNumber(total)}
+            {formatNumber(Number(total))}
           </h1>
         </div>
 

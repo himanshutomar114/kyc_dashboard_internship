@@ -15,7 +15,22 @@ const PANDataStatsSection = () => {
 
   const currentData = data.panDataStats[activeTab];
 
-  const StatCard = ({ icon, title, data, bgColor }) => (
+  const StatCard = ({
+    icon,
+    title,
+    data,
+    bgColor,
+  }: {
+    icon: React.ReactNode;
+    title: string;
+    data: {
+      kfinKra: number | string;
+      withImage: number | string;
+      withoutImage: number | string;
+      total: number | string;
+    };
+    bgColor: string;
+  }) => (
     <div className="bg-white rounded-lg p-2 shadow-sm border border-gray-100 mb-2">
       <div className="flex items-center justify-between">
         <div className="flex items-center flex-1">

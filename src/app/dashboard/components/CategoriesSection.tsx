@@ -4,11 +4,17 @@ import React, { useState } from "react";
 import { useKYCData } from "@/hooks/useKYCData";
 import CircularChartSkeleton from "./CircularChartSkeleton";
 
+type ProgressBarSetProps = {
+  label: string;
+  darkValue: number;
+  lightValue: number;
+};
+
 const CategoriesSection = () => {
   const [activeTab, setActiveTab] = useState<"Individual" | "Non Individual">("Individual");
   const { data, loading, error } = useKYCData(); // get real API data
 
-  const ProgressBarSet = ({ label, darkValue, lightValue }) => (
+  const ProgressBarSet: React.FC<ProgressBarSetProps> = ({ label, darkValue, lightValue }) => (
     <div className="mb-2">
       <div className="flex items-center mb-1">
         <span className="text-xs font-medium text-gray-400 w-7">{label}</span>
